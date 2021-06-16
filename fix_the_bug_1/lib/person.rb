@@ -1,5 +1,5 @@
 class Person
-	attr_reader :name, :cash_in_wallet, :debit_card_amount
+  attr_reader :name, :cash_in_wallet, :debit_card_amount
 
   def initialize(name, cash_in_wallet = 0, debit_card_amount = 0)
     @name = name
