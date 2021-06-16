@@ -61,7 +61,7 @@ RSpec.describe Person do
     end
 
     describe '#wallet_value' do
-      it 'gets the total amount of cash from this person' do
+      it 'gets the total amount of money for this person\'s wallet' do
         expect(@person.wallet_value).to 300
       end
     end
