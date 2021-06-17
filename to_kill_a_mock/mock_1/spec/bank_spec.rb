@@ -39,9 +39,9 @@ RSpec.describe Bank do
         client_3 = instance_double('Client')
 
         # Stubbing account_type for our mocks because it doesn't exist yet
-        allow(client_1).to receive(:account_type).and_return :personal
-        allow(client_2).to receive(:account_type).and_return :personal
-        allow(client_3).to receive(:account_type).and_return :checking
+        allow(client_1).to receive(:account_type).and_return(:personal)
+        allow(client_2).to receive(:account_type).and_return(:personal)
+        allow(client_3).to receive(:account_type).and_return(:checking)
 
         # Additionally you can also Mock with instance data like this
         client_a = instance_double('Client', name: 'Megan')
