@@ -49,6 +49,8 @@ RSpec.describe Bank do
         client_c = instance_double('Client', name: 'Rich')
         
         # When `register_new_client` is invoked, the method also invokes `client.account_type` which is why we need to stub it
+        # Usually the implementation won't be written yet and this is where planning ahead is also important with TDD,
+        # what external methods will be used? What internal methdos will be used?
         @bank.register_new_client(client_1)
         @bank.register_new_client(client_2)
         @bank.register_new_client(client_3)
