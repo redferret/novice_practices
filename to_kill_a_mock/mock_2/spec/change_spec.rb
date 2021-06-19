@@ -54,5 +54,33 @@ RSpec.describe ChangeMachine do
         expect(actual_result).to eq expected_result
       end
     end
+
+    describe '#equal_amount_to_denomination' do
+      it 'returns 1 and subtracts the denomination from the current amount' do
+        expected_result = 1
+        expected_change_due = 0
+
+        actual_result = @change_machine.equal_amount_to_denomination(10)
+        actual_change_due = @change_machine.change_due
+
+        expect(actual_result).to eq expected_result
+        expect(actual_change_due).to eq expected_change_due
+      end
+    end
+
+    describe '#count_number_of_denominations' do
+      it 'returns how many of the denomination is needed and subtracts it from the change due' do
+
+        denomination = 5
+        expected_result = 2
+        actual_result = @change_machine.count_number_of_denominations(denomination)
+
+        expected_change_due = 0
+        actual_change_due = @change_machine.change_due
+
+        expect(actual_result).to eq expected_result
+        expect(actual_change_due).to eq expected_change_due
+      end
+    end
   end
 end
