@@ -13,9 +13,7 @@ class Bank
   end
 
   def sum_all_client_accounts
-    client_instances.each_with_object(0) do |client, sum|
-      sum + client.sum_of_all_accounts
-    end
+    client_instances.map(&:sum_of_all_accounts).inject(0, &:+)
   end
 
   private
