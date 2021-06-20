@@ -14,7 +14,7 @@ RSpec.describe ChangeMachine do
       @change_machine = ChangeMachine.new(10.00)
     end
 
-    describe '#calculate_change' do
+    describe '#calculate_change,' do
       it 'returns 1 if the amount due is equal to the denomination' do
 
         # Write a stub on equal_amount
@@ -55,7 +55,7 @@ RSpec.describe ChangeMachine do
       end
     end
 
-    describe '#equal_amount' do
+    describe '#equal_amount,' do
       it 'returns 1 and subtracts the denomination from the current amount' do
         expected_result = 1
         expected_change_due = 0
@@ -68,7 +68,7 @@ RSpec.describe ChangeMachine do
       end
     end
 
-    describe '#count_number_of_denominations' do
+    describe '#count_number_of_denominations,' do
       it 'returns how many of the denomination is needed and subtracts it from the change due' do
 
         denomination = 5
