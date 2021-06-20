@@ -30,7 +30,7 @@ RSpec.describe Bank do
       @bank = Bank.new('USBank')
     end
 
-    describe '#register_new_client' do
+    describe '#register_new_client,' do
       it 'adds a new client to the bank based on their account type' do
 
         # The creation of a Mock. Because Client doesn't exist we use a String to give some information about what we are mocking.
@@ -66,7 +66,7 @@ RSpec.describe Bank do
       end
     end
 
-    describe '#sum_all_client_accounts' do
+    describe '#sum_all_client_accounts,' do
       it 'sums all accounts for all clients and returns this sum' do
         # - First identify the mock(s) you need
         # - Second what methods will this test for `sum_all_client_accounts` invoke (externally or internally)?

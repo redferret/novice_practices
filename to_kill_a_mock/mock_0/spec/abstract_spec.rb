@@ -14,7 +14,7 @@ RSpec.describe Abstract do
       @abs = Abstract.new(144)
     end
 
-    describe '#abstract_method_1' do
+    describe '#abstract_method_1,' do
       it 'returns true if abstract_method_2 returns an even number' do
         # Since we want to ONLY test this method and we know we need to use another method
         # we should stub it to isolate our test.
@@ -34,7 +34,7 @@ RSpec.describe Abstract do
       end
     end
 
-    describe '#abstract_method_3' do
+    describe '#abstract_method_3,' do
       it 'returns true if abstract_method_1 returns false' do
         # Write a test for the expected outcome of abstract_method_3 using a stub
         # Then implement the method to make the test pass
