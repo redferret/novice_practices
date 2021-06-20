@@ -17,15 +17,15 @@ RSpec.describe ChangeMachine do
     describe '#calculate_change' do
       it 'returns 1 if the amount due is equal to the denomination' do
 
-        # Write a stub on equal_amount_to_denomination
-        allow(@change_machine).to receive(:equal_amount_to_denomination).and_return(1)
+        # Write a stub on equal_amount
+        allow(@change_machine).to receive(:equal_amount).and_return(1)
 
         denomination = 10
         expected_result = 1
         actual_result = @change_machine.calculate_change(denomination)
 
         # This allows us to test more about calculate_change and how it invokes the stubbed method.
-        expect(@change_machine).to have_received(:equal_amount_to_denomination).with(denomination)
+        expect(@change_machine).to have_received(:equal_amount).with(denomination)
         expect(actual_result).to eq expected_result
       end
 
@@ -48,19 +48,19 @@ RSpec.describe ChangeMachine do
         expected_result = 0
         actual_result = @change_machine.calculate_change(50)
 
-        # Bonus: Try to write two expectations that equal_amount_to_denomination and count_number_of_denominations
+        # Bonus: Try to write two expectations that equal_amount and count_number_of_denominations
         # were never invoked. Hint: you'll need to use to_not matcher and also stub these methods.
 
         expect(actual_result).to eq expected_result
       end
     end
 
-    describe '#equal_amount_to_denomination' do
+    describe '#equal_amount' do
       it 'returns 1 and subtracts the denomination from the current amount' do
         expected_result = 1
         expected_change_due = 0
 
-        actual_result = @change_machine.equal_amount_to_denomination(10)
+        actual_result = @change_machine.equal_amount(10)
         actual_change_due = @change_machine.change_due
 
         expect(actual_result).to eq expected_result
