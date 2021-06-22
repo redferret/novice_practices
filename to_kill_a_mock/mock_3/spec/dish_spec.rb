@@ -7,7 +7,7 @@ RSpec.describe Dish do
       before :each do
         @dish = Dish.new('Dish Name', :category)
       end
-      it 'tests that Dish exists' do
+      it 'expects that a Dish exists' do
         expect(@dish).is_a? Dish
       end
 
@@ -19,9 +19,5 @@ RSpec.describe Dish do
         expect(@dish.category).to eq :category
       end
     end
-  end
-
-  describe 'instance method,' do
-
   end
 end
