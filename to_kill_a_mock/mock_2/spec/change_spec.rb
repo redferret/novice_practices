@@ -17,7 +17,7 @@ RSpec.describe ChangeMachine do
     describe '#calculate_change,' do
       it 'returns 1 if the amount due is equal to the denomination' do
 
-        # Write a stub on equal_amount
+        # We write a stub on equal_amount
         allow(@change_machine).to receive(:equal_amount).and_return(1)
 
         denomination = 10
